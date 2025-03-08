@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+.history
+.vscode
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.development.local
+package-lock.json

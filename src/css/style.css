@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-sans-regular-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-sans-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.nunito-title-regular {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.nunito-title-bold {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --nunito-title-regular: "Nunito", sans-serif;
+  --nunito-title-bold: "Nunito", sans-serif;
+  --nunito-title-regular-italic: "Nunito", sans-serif;
+  --nunito-title-bold-italic: "Nunito", sans-serif;
+  --pt-sans-regular: "PT Sans", sans-serif;
+  --pt-sans-bold: "PT Sans", sans-serif;
+  --pt-sans-regular-italic: "PT Sans", sans-serif;
+  --pt-sans-bold-italic: "PT Sans", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: var(--background_color);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --background_color: #140b29;
+  --primary_color: #7765F3;
+  --secondary_color: #57FDF3;
+  --tertiary_color: #FF77F1;
+  --quaternary_color: #FF77F3;
+  --background_color: #fff;
+  --primary_color: #7765F3;
+  --secondary_color: #57FDF3;
+  --tertiary_color: #FF77F1;
+  --primary_text_color: #000;
+  --secondary_text_color: #fff;
+  --primary_text_color: #fff;
+  --secondary_text_color: #000;
+  --primary_font: "Nunito", sans-serif;
+  --secondary_font: "PT Sans", sans-serif;
+  --tertiary_font: "PT Sans", sans-serif;
+}
+
+h1 {
+  font-family: var(--nunito-title-bold);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #09ecdd;
+}
+
+:root {
+  --h1: 700 1.125rem/1.2em var(--nunito-title-bold);
+  --h2: 700 1rem/1.2em var(--nunito-title-bold);
+  --h3: 700 0.875rem/1.2em var(--nunito-title-bold);
+  --p: 400 1rem/1.2em var(--nunito-title-regular);
+  --p-small: 400 0.875rem/1.2em var(--nunito-title-regular);
+  --p-x-small: 400 0.75rem/1.2em var(--nunito-title-regular);
+}
