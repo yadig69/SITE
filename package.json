@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build-sass && browser-sync start --server --files src/css/style.css",
-    "build-sass": "sass --source-map=none --style compressed --no-charset src/scss/style.scss src/css/style.css",
-    "watch-sass": "sass src/scss/style.scss src/css/style.css -w"
+    "build-sass": "sass --no-source-map --no-charset src/scss/style.scss src/css/style.css",
+    "watch-sass": "sass src/scss/style.scss src/css/style.css --output-style compressed -w"
   },
   "keywords": [],
   "author": "",

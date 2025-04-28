@@ -1,4 +1,3 @@
-
 /* Box sizing rules */
 *,
 *::before,
@@ -24,12 +23,57 @@ dd {
   margin: 0;
 }
 
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphenate-limit-chars: 3 3 3;
+  hyphenate-limit-chars: 3 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+}
+
+/** Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
 /* Remove list styles on ul, ol elements */
 ul,
 ol {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lt-primary_color);
 }
 
 /* Set core root defaults */
@@ -39,13 +83,16 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  font-family: var(--primary_font);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: var(--background_color);
+  background: var(--dk-background_color);
 }
 
 /* Make images easier to work with */
+// note: if you want your image to overflow its container, use the following code: max-width: revert;
+
 img,
 picture {
   max-width: 100%;
@@ -65,7 +112,7 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -74,4 +121,13 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+// the isolation property allows us to create a new stacking context without needing to set a z-index.
+/*This is beneficial since it allows us to guarantee that certain high-priority elements (modals, dropdowns, tooltips) will always show up above the other elements in our application. No weird stacking context bugs, no z-index arms race.
+
+You should tweak the selector to match your framework. We want to select the top-level element that your application is rendered within. For example, create-react-app uses a <div id="root">, so the correct selector is #root. */
+#root,
+#__next {
+  isolation: isolate;
 }

@@ -1,20 +1,36 @@
 h1 {
     font-family: var(--nunito-title-bold);
-    font-size: 2.5rem;
+    font-size: var(--h1);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: #09ecdd;
+    color: var(--dk-secondary_color);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: var(--nunito-title-bold);
+    font-size: var(--h2);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--dk-primary_text_color);
+    text-transform: uppercase;
 }
 
 :root {
     // font variables
-    --h1: 700 1.125rem/1.2em var(--nunito-title-bold);
+    --primary_font: "Nunito", sans-serif;
+    --nunito-title-regular: "Nunito", sans-serif;
+    --nunito-title-bold: "Nunito", sans-serif;
+    --secondary_font: "PT Sans", sans-serif;
+    // heading variables
+    --h1: 700 2.50rem/1.2em var(--nunito-title-bold);
     --h2: 700 1rem/1.2em var(--nunito-title-bold);
     --h3: 700 0.875rem/1.2em var(--nunito-title-bold);
 
     // paragraph variables
-    --p: 400 1rem/1.2em var(--nunito-title-regular);
-    --p-small: 400 0.875rem/1.2em var(--nunito-title-regular);
-    --p-x-small: 400 0.75rem/1.2em var(--nunito-title-regular);
+    --p: 400 1rem/1.2em var(--secondary_font);
+    --p-small: 400 0.875rem/1.2em var(--secondary_font);
+    --p-x-small: 400 0.75rem/1.2em var(--secondary_font);
 }

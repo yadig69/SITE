@@ -73,12 +73,57 @@ dd {
   margin: 0;
 }
 
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphenate-limit-chars: 3 3 3;
+  hyphenate-limit-chars: 3 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+}
+
+/** Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
 /* Remove list styles on ul, ol elements */
 ul,
 ol {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lt-primary_color);
 }
 
 /* Set core root defaults */
@@ -88,10 +133,11 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  font-family: var(--primary_font);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: var(--background_color);
+  background: var(--dk-background_color);
 }
 
 /* Make images easier to work with */
@@ -123,39 +169,111 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/*This is beneficial since it allows us to guarantee that certain high-priority elements (modals, dropdowns, tooltips) will always show up above the other elements in our application. No weird stacking context bugs, no z-index arms race.
+
+You should tweak the selector to match your framework. We want to select the top-level element that your application is rendered within. For example, create-react-app uses a <div id="root">, so the correct selector is #root. */
+#root,
+#__next {
+  isolation: isolate;
+}
+
 :root {
-  --background_color: #140b29;
-  --primary_color: #7765F3;
-  --secondary_color: #57FDF3;
-  --tertiary_color: #FF77F1;
-  --quaternary_color: #FF77F3;
-  --background_color: #fff;
-  --primary_color: #7765F3;
-  --secondary_color: #57FDF3;
-  --tertiary_color: #FF77F1;
-  --primary_text_color: #000;
-  --secondary_text_color: #fff;
-  --primary_text_color: #fff;
-  --secondary_text_color: #000;
-  --primary_font: "Nunito", sans-serif;
-  --secondary_font: "PT Sans", sans-serif;
+  --dk-background_color: hsl(258, 58%, 10%);
+  --dk-primary_color: hsl(248, 86%, 67%);
+  --dk-secondary_color: hsl(176, 98%, 67%);
+  --dk-tertiary_color: hsl(306, 100%, 73%);
+  --dk-quaternary_color: hsl(237, 100%, 73%);
+  --lt-background_color: hsl(0, 0%, 100%);
+  --lt-primary_color: hsl(248, 86%, 67%);
+  --lt-secondary_color: hsl(176, 98%, 67%);
+  --lt-tertiary_color: hsl(306, 100%, 73%);
+  --lt-primary_text_color: hsl(0, 2%, 10%);
+  --lt-secondary_text_color: hsl(0, 0%, 100%);
+  --dk-primary_text_color: hsl(0, 0%, 100%);
+  --dk-secondary_text_color: hsl(0, 0%, 0%);
   --tertiary_font: "PT Sans", sans-serif;
 }
 
 h1 {
   font-family: var(--nunito-title-bold);
-  font-size: 2.5rem;
+  font-size: var(--h1);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: #09ecdd;
+  color: var(--dk-secondary_color);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--nunito-title-bold);
+  font-size: var(--h2);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--dk-primary_text_color);
+  text-transform: uppercase;
 }
 
 :root {
-  --h1: 700 1.125rem/1.2em var(--nunito-title-bold);
+  --primary_font: "Nunito", sans-serif;
+  --nunito-title-regular: "Nunito", sans-serif;
+  --nunito-title-bold: "Nunito", sans-serif;
+  --secondary_font: "PT Sans", sans-serif;
+  --h1: 700 2.50rem/1.2em var(--nunito-title-bold);
   --h2: 700 1rem/1.2em var(--nunito-title-bold);
   --h3: 700 0.875rem/1.2em var(--nunito-title-bold);
-  --p: 400 1rem/1.2em var(--nunito-title-regular);
-  --p-small: 400 0.875rem/1.2em var(--nunito-title-regular);
-  --p-x-small: 400 0.75rem/1.2em var(--nunito-title-regular);
+  --p: 400 1rem/1.2em var(--secondary_font);
+  --p-small: 400 0.875rem/1.2em var(--secondary_font);
+  --p-x-small: 400 0.75rem/1.2em var(--secondary_font);
+}
+
+.nav__wrapper {
+  border: 0.0625rem solid #dc04f0;
+}
+.nav__wrapper .nav__items {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.nav__wrapper .nav__items .nav__item {
+  list-style: none;
+}
+
+#hero__wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 55vw;
+  overflow: hidden;
+}
+#hero__wrapper .profile__card .profile__card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.0625rem solid #fff;
+}
+#hero__wrapper .profile__card .profile__card-content h1 {
+  font-size: 32px;
+}
+#hero__wrapper .profile__card .profile__card-content p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 16px;
+  text-align: center;
+  min-width: 40%;
+}
+#hero__wrapper .profile__card img {
+  position: absolute;
+  width: 25%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.0625rem solid #0af6bb;
+}
+#hero__wrapper .profile__card #img__top {
+  border: 0.0625rem solid #f6e20a;
+  width: 20%;
+  left: 51%;
 }

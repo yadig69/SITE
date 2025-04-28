@@ -1,24 +1,24 @@
 :root {
     // dark mode colors
-    --background_color: #140b29;
-    --primary_color: #7765F3;
-    --secondary_color: #57FDF3;
-    --tertiary_color: #FF77F1;
-    --quaternary_color: #FF77F3;
+    --dk-background_color: hsl(258, 58%, 10%);
+    --dk-primary_color: hsl(248, 86%, 67%);
+    --dk-secondary_color: hsl(176, 98%, 67%);
+    --dk-tertiary_color: hsl(306, 100%, 73%);
+    --dk-quaternary_color: hsl(237, 100%, 73%);
     // light mode colors
-    --background_color: #fff;
-    --primary_color: #7765F3;
-    --secondary_color: #57FDF3;
-    --tertiary_color: #FF77F1;
+    --lt-background_color: hsl(0, 0%, 100%);
+    --lt-primary_color: hsl(248, 86%, 67%);
+    --lt-secondary_color: hsl(176, 98%, 67%);
+    --lt-tertiary_color: hsl(306, 100%, 73%);
     // light mode text colors
-    --primary_text_color: #000;
-    --secondary_text_color: #fff;
+    --lt-primary_text_color: hsl(0, 2%, 10%);
+    --lt-secondary_text_color: hsl(0, 0%, 100%);
     // dark mode text colors
-    --primary_text_color: #fff;
-    --secondary_text_color: #000;
+    --dk-primary_text_color: hsl(0, 0%, 100%);
+    --dk-secondary_text_color: hsl(0, 0%, 0%);
     // font variables
-    --primary_font: "Nunito", sans-serif;
-    --secondary_font: "PT Sans", sans-serif;
+   
+   
     --tertiary_font: "PT Sans", sans-serif;
 
 }
