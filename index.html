@@ -10,34 +10,30 @@
 
 <body>
     <!-- profile // card-left-wrap start -->
+    <div data-loading>
+        <span> <span></span> </span>
+        <span> <span></span> </span>
+    </div>
     <header class="header">
         <!-- header start -->
-       
         <section id="hero__wrapper" class="mid__line">
-            <!-- nav start -->
-            <nav class="nav__wrapper">
-                <ul class="nav__items">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Projects</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Skills</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- nav end -->
+           
 
             <!-- profile // card-left-wrap start -->
             <div class="profile__card-left-wrap profile__card">
+                <div class="nav__wrapper-left">
+                    <ul class="nav__items"">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="profile__card-content">
                     <h1>Gregory Singleton</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis est dolor accusamus adipisci
@@ -47,22 +43,35 @@
 
                 <img id="img__top" src="/src/assets/images/image2.png" alt="profile_picture">
             </div>
-            </div>
+            <!-- </div> -->
             <!-- profile // card-left-wrap end -->
 
 
             <!-- profile // card-right-wrap start -->
             <div class="profile__card-right-wrap profile__card">
-                <div class="profile__cardleft-content-wrap">
+                <div class="profile__cardright-content-wrap">
+                    <div class="nav__wrapper-right">
+                        <ul>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Projects</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Tools</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="profile__card-content">
-                        <h1>Gregory Singleton</h1>
+                        <!-- <h1>Gregory Singleton</h1> -->
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis est dolor accusamus
                             adipisci soluta
                             repudiandae
                             deserunt omnis molestiae similique neque.</p>
                     </div>
 
-                    <img id="img__bottom" src="/src/assets/images/profile-pic2.png" alt="profile_picture">
+                    <!-- <img id="img__bottom" src="/src/assets/images/profile-pic2.png" alt="profile_picture"> -->
                 </div>
             </div>
             <!-- profile // card-right-wrap end -->
@@ -73,11 +82,12 @@
         <section class="section-1 about"></section>
         <section class="section-2 projects"></section>
         <section class="section-3 skills"></section>
-        <section class="section-4 contact"></section>
-        <section class="section-4"></section>
+        <section class="section-4 tools"></section>
+        <section class="section-5 contact"></section>
 
     </main>
     <script src="src/js/main.js"></script>
+    <script src = "src/js/page_load-completion.js"></script>
 
 
 </body>
