@@ -1,90 +1,73 @@
 #hero__wrapper {
     // hero__wrapper start
     // position: relative;
-    width: 100%;
-    min-height: 55vw;
+    width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
 
     display: flex;
+    // justify-content: center;
+    // align-items: center;
 
     .profile__card-left-wrap {
         // profile__card-left-wrap start
-
         width: 70%;
-        background-color: var(--dk-background_color-left);
-
-        border: .0625rem solid #dc04f0;
-        border-radius: 5px;
-
-        .nav__wrapper-left {
-            // nav__wrapper-left start
-
-            width: 25%;
-            height: 50%;
-
-            background-color: #fff;
-            border: .0625rem solid #045bf0;
-            z-index: -1;
-
-            .nav__items {
-                // nav__items start
-                padding: 1.25rem;
-                display: flex;
-                flex-direction: column;
-
-                align-items: start;
-                // flex-wrap: wrap;
-                gap: 1rem;
+        min-height: 10vh;
+        // background-color: var(--dk-background_color-left);
 
 
-                .nav__item {
-                    // navItem start
-
-                    .nav__link {
-                        // navLink start
-
-                        font-size: 2.5rem;
-                        font-weight: 500;
-                        color: #000;
+        // border: .0625rem solid #dc04f0;
+        // border-radius: 5px;
 
 
-                    }
 
-                    // navLink end
-
-                }
-
-                // navItem end
-
-
-            }
-
-            // nav__items end
-
-
-        }
-
-        // nav__wrapper-left end
-
-
-        .profile__card-content {
+        .profile__card-left-content {
+            --border-width: 1px;
+            --primary-900: hsl(256, 43%, 7%);
+            --surface-1: var(--primary-900);
             // profileCard-content start
-            padding: var(--lrgCard_padding, 15px 10px);
-            margin: auto;
-            width: 50%;
+            padding: var(--lrgCard_padding, 15px 20px);
+            // margin: auto;
+            width: 35%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: .0625rem solid #fff;
-            border-radius: 5px;
+            // border: .0625rem solid #fff;
+            // border-radius: 5px;
+            // background: #00000069;
+            // filter: blur(1px);
+            // card-content positioning
+            border-radius: 1rem;
 
-            background: #00000069;
+            // position: relative;
+
+            background: hsl(from var(--surface-1) h s l / 0.5);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-135.7%, -50%);
+
+
+            .profile__card-left-content::before {
+                content: " ";
+                position: absolute;
+                inset: 0;
+                border-radius: inherit;
+                border: var(--border-width) solid transparent;
+                background: linear-gradient(var(--border-1), var(--border-2)) border-box;
+                mask: linear-gradient(#000 0 0) border-box, linear-gradient(#000 0 0) padding-box;
+                mask-composite: subtract;
+                z-index: -1;
+            }
 
             h1 {
                 // h1 start
                 color: #fff;
-                font-size: 32px;
+                font-size: 42px;
+                font-weight: 300;
+                letter-spacing: 4px;
             }
 
             // h1 end
@@ -92,7 +75,7 @@
 
             p {
                 // p start
-                color: #fff;
+                color: var(--lt-secondary_text_color);
                 font-size: 18px;
                 font-weight: 300;
                 margin-bottom: 16px;
@@ -104,19 +87,28 @@
 
             // p end
 
+            .btn {
+                // btn start
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: var(--primary-300);
+                color: var(--accent-400);
+                text-decoration: none;
+                border-radius: 1rem;
+                cursor: pointer;
+            }
+
+            // profileCard-content end
         }
-
-        // profileCard-content end
-
 
         img {
             position: absolute;
-            width: 35%;
             top: 35%;
-            left: 50%;
-            transform: translate(-50%, -40%);
+            left: -50%;
+            transform: translate(-50%, -10%);
+            border: solid 4px 4px #fff;
             // border: .0625rem solid #0af6bb;
-     }
+        }
 
         #img__top {
             //imgTop start
@@ -132,9 +124,10 @@
 
 
 
-    }
 
-    // profile__card-left-wrap end
+
+        // profile__card-left-wrap end
+    }
 }
 
 // hero__wrapper end

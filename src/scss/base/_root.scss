@@ -9,7 +9,7 @@ $cream: #eff7cf;
 :root {
     // dark mode colors
     --dk-background_color: #140b28;
-    --dk-background_color-left: hsl(260, 29%, 82%);
+    --dk-background_color-left: hsl(261, 73%, 64%);
     --dk-primary_color: hsl(248, 86%, 67%);
     --dk-secondary_color: hsl(176, 98%, 67%);
     --dk-tertiary_color: hsl(306, 100%, 73%);
@@ -21,7 +21,7 @@ $cream: #eff7cf;
     --lt-tertiary_color: hsl(306, 100%, 73%);
     // light mode text colors
     --lt-primary_text_color: hsl(0, 2%, 10%);
-    --lt-secondary_text_color: hsl(0, 0%, 100%);
+    --lt-secondary_text_color: hsl(0, 2%, 67%);
     // dark mode text colors
     --dk-primary_text_color: hsl(0, 0%, 100%);
     --dk-secondary_text_color: hsl(0, 0%, 0%);
@@ -78,7 +78,33 @@ $cream: #eff7cf;
     $gradient-radial: radial-gradient(#052b56ff, #052f5fff, #03416bff, #005377ff, #b3e9c7ff, #d72483ff, #eff7cfff);
 }
 
- :root {
+
+
+:root {
+    /* color variables */
+    --bg-color: #2A3950;
+    --bs-color: rgba(0, 0, 0, 0.6);
+    --gradient-start: #fe9677;
+    --gradient-end: #f64668;
+    --text-color: #fff;
+    /* spacing variables */
+    --hover-scale: 1.2;
+    --shadow-blur: 2px;
+    --shadow-spread: 5px;
+    --outline-width: 2px;
+    --outline-offset: 2px;
+    --menu-width: 15.625rem;
+    --border-radius: .3125rem;
+    --font-size: 1.125rem;
+    --padding: .5rem;
+    --margin: .1875rem 0;
+    /* animation variables */
+    --letter-spacing: .0625rem;
+    --letter-spacing-expanded: 6.25rem;
+    --transition-duration: 0.3s;
+}
+
+ b:root {
      --dk-50-blue: #3697b9 - 50%,
      --dk-24-blue: #abcada - 24%,
      --dk-13-blue: #135e80 - 13%,

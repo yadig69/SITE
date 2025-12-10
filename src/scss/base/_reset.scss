@@ -84,7 +84,7 @@ html:focus-within {
 /* Set core body defaults */
 body {
   font-family: var(--primary_font);
-  min-height: 100vh;
+  height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background: var(--dk-background_color);
