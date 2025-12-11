@@ -1,5 +1,7 @@
 # Portfolio Notes
 
+.split screen portfolio
+
 ## 1 Hero Section
 
  a - c.t.a_button
